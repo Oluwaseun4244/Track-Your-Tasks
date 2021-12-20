@@ -4,7 +4,7 @@ import Tasks from "./components/Tasks";
 import Addtask from "./components/Addtask";
 
 function App() {
-  const  [showAddTask, setshowAddTask] = useState(false)
+  const  [showAddTask, setshowAddTask] = useState(true)
   const [tasks, setTask] = useState(
     [
       {

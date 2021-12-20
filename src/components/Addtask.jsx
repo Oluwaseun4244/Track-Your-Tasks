@@ -2,6 +2,7 @@ import { useState } from "react"
 
 const Addtask = ({ onAdd }) => {
    const [text, setText] = useState('')
+   const [time, setTime] = useState('')
    const [day, setDay] = useState('')
    const [reminder, setReminder] = useState(false)
 
@@ -11,7 +12,7 @@ const Addtask = ({ onAdd }) => {
          alert("kindly add text")
          return
       }
-      onAdd({ text, day, reminder })
+      onAdd({ text, day, reminder, time })
 
       setText('')
       setDay('')
@@ -25,7 +26,11 @@ const Addtask = ({ onAdd }) => {
          </div>
          <div className="form-control">
             <label>Day & Time</label>
-            <input type="time" placeholder="add it here" value={day} onChange={(ev) => setDay(ev.target.value)} />
+            <input type="date"  value={day} onChange={(ev) => setDay(ev.target.value)} />
+         </div>
+         <div className="form-control">
+            <label>Time</label>
+            <input type="time"  value={time} onChange={(ev) => setTime(ev.target.value)} />
          </div>
          <div className="form-control">
             <label>Set Reminder</label>
