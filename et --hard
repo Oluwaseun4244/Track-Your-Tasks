@@ -1,0 +1,32 @@
+[33m879d7b9[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m HEAD@{0}: commit: updating
+[33m6d2dfdc[m[33m ([m[1;31morigin/gh-pages[m[33m)[m HEAD@{1}: pull origin gh-pages: Fast-forward
+[33ma2557c5[m HEAD@{2}: checkout: moving from gh-pages to main
+[33ma792815[m[33m ([m[1;32mgh-pages[m[33m)[m HEAD@{3}: commit: Hurray
+[33m93842ba[m HEAD@{4}: commit: Hurray
+[33me8f30e7[m HEAD@{5}: commit: Hurray
+[33mdccd9eb[m HEAD@{6}: commit: Hurray
+[33m93b157a[m HEAD@{7}: checkout: moving from main to gh-pages
+[33ma2557c5[m HEAD@{8}: checkout: moving from gh-pages to main
+[33m93b157a[m HEAD@{9}: commit: Hurray
+[33m8ebb71d[m HEAD@{10}: commit: Hurray
+[33m82d5249[m HEAD@{11}: commit: Hurray
+[33mcbeb5a4[m HEAD@{12}: checkout: moving from gh-pages to gh-pages
+[33mcbeb5a4[m HEAD@{13}: commit: testing
+[33m798546a[m HEAD@{14}: commit: testing
+[33m9e6d909[m HEAD@{15}: commit: now
+[33md3a50f8[m HEAD@{16}: commit: updating my gh pages
+[33m8d10cbd[m HEAD@{17}: checkout: moving from gh-pages to gh-pages
+[33m8d10cbd[m HEAD@{18}: merge main: Merge made by the 'ort' strategy.
+[33me5b95d3[m HEAD@{19}: checkout: moving from main to gh-pages
+[33ma2557c5[m HEAD@{20}: commit: fixing things
+[33mc57c37b[m HEAD@{21}: checkout: moving from gh-pages to main
+[33me5b95d3[m HEAD@{22}: commit: fixing bugs
+[33mc57c37b[m HEAD@{23}: checkout: moving from main to gh-pages
+[33mc57c37b[m HEAD@{24}: checkout: moving from gh-pages to main
+[33mc57c37b[m HEAD@{25}: checkout: moving from main to gh-pages
+[33mc57c37b[m HEAD@{26}: commit: adding time to task
+[33m27fd8d1[m HEAD@{27}: commit: fixing little issues
+[33m6a478d3[m HEAD@{28}: Branch: renamed refs/heads/main to refs/heads/main
+[33m6a478d3[m HEAD@{30}: Branch: renamed refs/heads/master to refs/heads/main
+[33m6a478d3[m HEAD@{32}: commit: first commit
+[33m208c1f0[m HEAD@{33}: commit (initial): Initialize project using Create React App

@@ -9,16 +9,16 @@ function App() {
     [
       {
         id: 1,
-        text: "Doctors appointement",
-        day: "Feb 5th",
-        time: "2:20pm",
+        text: "Buy Xmas Chickens",
+        day: "Dec 24th",
+        time: "2:00pm",
         reminder: true
       },
       {
         id: 2,
         text: "Meeting at School",
-        day: "Feb 6th",
-        time: "1:30pm",
+        day: "Jan 3rd",
+        time: "11:30am",
         reminder: true
       },
       {
