@@ -52,7 +52,7 @@ function App() {
     <div className="Container">
       <Header title="Task Tracker" onAdd={()=> setshowAddTask(!showAddTask)} showAdd={showAddTask}/>
       
-      {showAddTask && <Addtask onAdd={addtask}/>}
+      {showAddTask && <Addtask onAdd={addtask} tasks={tasks }/>}
       {tasks.length > 0 ? (<Tasks tasks={tasks} onDelete={deleteTask} onToggle={toggleReminder} />) : ("No task")}
     </div>
   );
