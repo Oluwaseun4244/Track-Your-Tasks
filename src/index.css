@@ -118,7 +118,7 @@ footer {
 }
 
 .rem{
-  margin-left: 20%;
-  margin-top: 20px;
+  margin-inline: 20%;
+  margin-block: 3%;
   color: teal;
 }
