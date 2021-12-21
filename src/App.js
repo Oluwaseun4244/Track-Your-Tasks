@@ -12,21 +12,21 @@ function App() {
         text: "Doctors appointement",
         day: "Feb 5th",
         time: "2:20pm",
-        reminder: true,
+        reminder: true
       },
       {
         id: 2,
         text: "Meeting at School",
         day: "Feb 6th",
         time: "1:30pm",
-        reminder: true,
+        reminder: true
       },
       {
         id: 3,
         text: "Food Shopping",
         day: "Feb 5th",
         time: "2:30pm",
-        reminder: false,
+        reminder: false
       },
     ]
   )
