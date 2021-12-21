@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/Track-Your-Tasks/static/css/main.c16a9071.chunk.css",
-    "main.js": "/Track-Your-Tasks/static/js/main.74a27714.chunk.js",
-    "main.js.map": "/Track-Your-Tasks/static/js/main.74a27714.chunk.js.map",
+    "main.css": "/Track-Your-Tasks/static/css/main.92d12155.chunk.css",
+    "main.js": "/Track-Your-Tasks/static/js/main.382b11c1.chunk.js",
+    "main.js.map": "/Track-Your-Tasks/static/js/main.382b11c1.chunk.js.map",
     "runtime-main.js": "/Track-Your-Tasks/static/js/runtime-main.51816ccb.js",
     "runtime-main.js.map": "/Track-Your-Tasks/static/js/runtime-main.51816ccb.js.map",
     "static/js/2.a0b587bd.chunk.js": "/Track-Your-Tasks/static/js/2.a0b587bd.chunk.js",
@@ -10,13 +10,13 @@
     "static/js/3.f112d181.chunk.js": "/Track-Your-Tasks/static/js/3.f112d181.chunk.js",
     "static/js/3.f112d181.chunk.js.map": "/Track-Your-Tasks/static/js/3.f112d181.chunk.js.map",
     "index.html": "/Track-Your-Tasks/index.html",
-    "static/css/main.c16a9071.chunk.css.map": "/Track-Your-Tasks/static/css/main.c16a9071.chunk.css.map",
+    "static/css/main.92d12155.chunk.css.map": "/Track-Your-Tasks/static/css/main.92d12155.chunk.css.map",
     "static/js/2.a0b587bd.chunk.js.LICENSE.txt": "/Track-Your-Tasks/static/js/2.a0b587bd.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.51816ccb.js",
     "static/js/2.a0b587bd.chunk.js",
-    "static/css/main.c16a9071.chunk.css",
-    "static/js/main.74a27714.chunk.js"
+    "static/css/main.92d12155.chunk.css",
+    "static/js/main.382b11c1.chunk.js"
   ]
 }
