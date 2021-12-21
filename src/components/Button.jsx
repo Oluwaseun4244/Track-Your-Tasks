@@ -16,7 +16,7 @@ const Button = ({ color, text, press }) => {
 };
 
 Button.defaultProps = {
-  color: "teal",
+  color: "teal"
 };
 
 export default Button;
