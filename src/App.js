@@ -2,6 +2,8 @@ import { useState } from "react"
 import Header from "./components/Header";
 import Tasks from "./components/Tasks";
 import Addtask from "./components/Addtask";
+import notify from "./Notify/Notify";
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   const  [showAddTask, setshowAddTask] = useState(true)
@@ -33,13 +35,16 @@ function App() {
 
   const addtask = (taskObj) => {
     const id = Math.floor(Math.random() * 200000) + 1
-    const newTask = {id, ...taskObj}
+    const newTask = {id:id, ...taskObj}
     setTask([...tasks, newTask])
+    notify(`Task " ${newTask.text}" Added`, "success")
 
   }
 
-  const deleteTask = (ev) => {
+  const deleteTask = (ev, text) => {
     setTask(tasks.filter(task => task.id !== ev))
+    notify(`Task " ${text}" deleted`, "warn")
+
   }
 
   const toggleReminder = (ev) => {

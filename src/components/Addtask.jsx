@@ -1,4 +1,5 @@
 import { useState } from "react"
+import notify from "../Notify/Notify";
 
 const Addtask = ({ onAdd, tasks }) => {
    const [text, setText] = useState('')
@@ -9,7 +10,7 @@ const Addtask = ({ onAdd, tasks }) => {
    const onSubmit = (ev) => {
       ev.preventDefault()
       if (!text) {
-         alert("kindly add text")
+         notify("kindly add a Task", "warn")
          return
       }
       
@@ -34,7 +35,7 @@ const Addtask = ({ onAdd, tasks }) => {
             <label className="label">Time</label>
             <input type="time"  value={time} onChange={(ev) => setTime(ev.target.value)} />
          </div>
-         <div className="form-control">
+         <div className="form-control">   
             <label className="label">Set Reminder</label>
             <input type="checkbox" checked={reminder} onChange={(ev) => setReminder(ev.currentTarget.checked)} />
          </div>
