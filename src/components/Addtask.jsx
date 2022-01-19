@@ -18,19 +18,21 @@ const Addtask = ({ onAdd, tasks }) => {
   };
 
   const changeRminder = (ev) => {
-    if (ev.target.checked) {
-      setTaskObj({ ...taskObj, reminder: true });
-    } else {
-      setTaskObj({ ...taskObj, reminder: false });
-    }
+    ev.target.checked ? (
+      setTaskObj({ ...taskObj, reminder: true })
+     ) : (
+      setTaskObj({ ...taskObj, reminder: false })
+     )
   };
 
   const onSubmit = (ev) => {
     ev.preventDefault();
-    if (!taskObj.text) {
-      notify("kindly add a Task", "warn");
+    if (!taskObj.text || !taskObj.day || !taskObj.time) {
+      notify("kindly fill the input fileds", "warn");
       return;
-    }
+    } 
+
+
 
     onAdd(taskObj);
 
@@ -75,7 +77,7 @@ const Addtask = ({ onAdd, tasks }) => {
         />
       </div>
       <div className="form-control">
-        <label className="label">Set Reminder</label>
+        <label className="reminder-label">Set Reminder</label>
         <input
           type="checkbox"
           checked={taskObj.reminder}

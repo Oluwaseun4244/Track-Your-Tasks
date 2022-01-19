@@ -1,6 +1,4 @@
-import { createContext } from "react";
 import { Zoom, toast } from "react-toastify";
-export const userContext = createContext();
 // export const notify = createContext();
 
 toast.configure();

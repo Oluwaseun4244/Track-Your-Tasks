@@ -61,7 +61,7 @@ function App() {
       {tasks.length > 0 ? (
         <Tasks tasks={tasks} onDelete={deleteTask} onToggle={toggleReminder} />
       ) : (
-        "No task"
+        <h3>No task</h3>
       )}
     </div>
   );
