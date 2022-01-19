@@ -1,49 +1,94 @@
-import { useState } from "react"
+import { useState } from "react";
 import notify from "../Notify/Notify";
 
 const Addtask = ({ onAdd, tasks }) => {
-   const [text, setText] = useState('')
-   const [time, setTime] = useState('')
-   const [day, setDay] = useState('')
-   const [reminder, setReminder] = useState(false)
 
-   const onSubmit = (ev) => {
-      ev.preventDefault()
-      if (!text) {
-         notify("kindly add a Task", "warn")
-         return
-      }
-      
-      onAdd({ text, day, reminder, time })
+  const [taskObj, setTaskObj] = useState({
+    text: "",
+    day: "",
+    time: "",
+    reminder: false
+  });
 
-      setText('')
-      setDay('')
-      setReminder(false)
-   }
-   return (
-      <form className="add-form" onSubmit={onSubmit}>
-         
-         <div className="form-control">
-            <label className="label">Add Task</label>
-            <input type="text" placeholder="add a task" value={text} onChange={(ev) => setText(ev.target.value)} />
-         </div>
-         <div className="form-control">
-            <label className="label">Day</label>
-            <input type="date"  value={day} onChange={(ev) => setDay(ev.target.value)} />
-         </div>
-         <div className="form-control">
-            <label className="label">Time</label>
-            <input type="time"  value={time} onChange={(ev) => setTime(ev.target.value)} />
-         </div>
-         <div className="form-control">   
-            <label className="label">Set Reminder</label>
-            <input type="checkbox" checked={reminder} onChange={(ev) => setReminder(ev.currentTarget.checked)} />
-         </div>
+  const handleChange = (ev) => {
+    let value = ev.target.value;
+    const newid = Math.floor(Math.random() * 200000) + 1;
+    // const newTask = {id:id, ...taskObj}
+    setTaskObj({ ...taskObj, id: newid, [ev.target.name]: value });
+  };
 
-         <input className="btn btn-block" type="submit" value="Save task" />
-         {tasks.length > 0 && <h4 className="rem">Double tap task to set reminder</h4>}
-      </form>
-   )
-}
+  const changeRminder = (ev) => {
+    if (ev.target.checked) {
+      setTaskObj({ ...taskObj, reminder: true });
+    } else {
+      setTaskObj({ ...taskObj, reminder: false });
+    }
+  };
 
-export default Addtask
+  const onSubmit = (ev) => {
+    ev.preventDefault();
+    if (!taskObj.text) {
+      notify("kindly add a Task", "warn");
+      return;
+    }
+
+    onAdd(taskObj);
+
+    setTaskObj({
+      text: "",
+      day: "",
+      time: "",
+    });
+
+  };
+
+  return (
+    <form className="add-form" onSubmit={onSubmit}>
+      <div className="form-control">
+        <label className="label">Add Task</label>
+
+        <input
+          name="text"
+          type="text"
+          placeholder="add a task"
+          value={taskObj.text}
+          onChange={handleChange}
+        />
+      </div>
+      <div className="form-control">
+        <label className="label">Day</label>
+
+        <input
+          name="day"
+          type="date"
+          value={taskObj.day}
+          onChange={handleChange}
+        />
+      </div>
+      <div className="form-control">
+        <label className="label">Time</label>
+        <input
+          name="time"
+          type="time"
+          value={taskObj.time}
+          onChange={handleChange}
+        />
+      </div>
+      <div className="form-control">
+        <label className="label">Set Reminder</label>
+        <input
+          type="checkbox"
+          checked={taskObj.reminder}
+          onChange={(ev) => changeRminder(ev)}
+        />
+      </div>
+
+      <input className="btn btn-block" type="submit" value="Save task" />
+      {tasks.length > 0 && (
+        <h4 className="rem">Double tap task to set reminder</h4>
+      )}
+    </form>
+  );
+};
+
+export default Addtask;
