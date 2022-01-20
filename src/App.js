@@ -4,40 +4,27 @@ import Tasks from "./components/Tasks";
 import Addtask from "./components/Addtask";
 import notify from "./Notify/Notify";
 import "react-toastify/dist/ReactToastify.css";
+import data from "./Data";
 
 function App() {
   const [showAddTask, setshowAddTask] = useState(true);
-  const [tasks, setTask] = useState([
-    {
-      id: 1,
-      text: "Buy Xmas Chickens",
-      day: "Dec 24th",
-      time: "2:00pm",
-      reminder: true,
-    },
-    {
-      id: 2,
-      text: "Meeting at School",
-      day: "Jan 3rd",
-      time: "11:30am",
-      reminder: true,
-    },
-    {
-      id: 3,
-      text: "Food Shopping",
-      day: "Feb 5th",
-      time: "2:30pm",
-      reminder: false,
-    },
-  ]);
+  const todoIsThere = localStorage.getItem("Todos");
+  const getTodo = JSON.parse(localStorage.getItem("Todos"));
+  const [tasks, setTask] = useState(todoIsThere ? getTodo : data);
 
   const addtask = (newTask) => {
     setTask([...tasks, newTask]);
+    let copy = ([...tasks, newTask]);
+    localStorage.setItem("Todos", JSON.stringify(copy));
     notify(`Task " ${newTask.text}" Added`, "success");
   };
 
   const deleteTask = (ev, text) => {
-    setTask(tasks.filter((task) => task.id !== ev));
+    let remainingTasks = tasks.filter((task) => {
+     return task.id !== ev
+    });
+    setTask(remainingTasks)
+    localStorage.setItem("Todos", JSON.stringify(remainingTasks));
     notify(`Task " ${text}" deleted`, "warn");
   };
 
