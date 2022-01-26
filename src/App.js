@@ -28,12 +28,14 @@ function App() {
     notify(`Task " ${text}" deleted`, "warn");
   };
 
-  const toggleReminder = (ev) => {
+  const toggleReminder = (id) => {
     setTask(
       tasks.map((task) =>
-        task.id === ev ? { ...task, reminder: !task.reminder } : task
+        task.id === id ? { ...task, reminder: !task.reminder } : task
       )
+      
     );
+    // localStorage.setItem("Todos", JSON.stringify(tasks));
   };
 
   return (
